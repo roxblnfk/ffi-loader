@@ -41,7 +41,7 @@ final class Loader
      */
     public static function get(string $class, LoggerInterface $logger = null): Context
     {
-        return self::$bindings[$class] ??= self::load($class, $logger);
+        return self::$bindings[$class] ??= self::load($class, null, $logger);
     }
 
     /**
